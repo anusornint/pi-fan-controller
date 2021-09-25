@@ -1,3 +1,9 @@
+# install
+- git clone https://github.com/anusornint/pi-fan-controller.git
+- edit database parameter in file fancontrol.py 
+- run script/install
+- basic command systemctl [start|stop|restart|status] fancontrol
+
 # Pi Fan Controller
 
 Raspberry Pi fan controller.
