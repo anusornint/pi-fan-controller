@@ -3,7 +3,10 @@ Description=CPU temp monitor & fancontrol App.
 After=network.target
 
 [Service]
-Restart=on-failure
+Restart=always
+RestartSec=1
+User=root
+
 WorkingDirectory=/usr/local/bin
 ExecStart=/usr/local/bin/fancontrol.py
 
