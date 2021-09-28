@@ -1,0 +1,11 @@
+[Unit]
+Description=CPU temp monitor & fancontrol App.
+After=network.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/usr/local/bin
+ExecStart=/usr/local/bin/fancontrol.py
+
+[Install]
+WantedBy=multi-user.target
