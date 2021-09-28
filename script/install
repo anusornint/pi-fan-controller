@@ -9,10 +9,11 @@ sudo cp fancontrol.py /usr/local/bin/
 sudo chmod +x /usr/local/bin/fancontrol.py
 
 echo "=> Starting fan controller...\n"
-sudo cp fancontrol.sh /etc/init.d/
-sudo chmod +x /etc/init.d/fancontrol.sh
+sudo cp fancontrol.service /lib/systemd/system/
+sudo chmod 644 /lib/systemd/system/fancontrol.service
 
-sudo update-rc.d fancontrol.sh defaults
-sudo /etc/init.d/fancontrol.sh start
+sudo systemctl daemon-reload
+sudo systemctl enable fancontrol
+sudo systemctl start fancontrol
 
 echo "Fan controller installed."
